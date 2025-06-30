@@ -1,8 +1,8 @@
-minio==7.2.5
-pandas==2.2.1
-PyMuPDF==1.24.3
-psycopg2-binary==2.9.9
-import-ipynb==0.1.4
+minio
+pandas
+PyMuPDF
+psycopg2-binary
+import-ipynb
 PyPDF2
 openpyxl
 python-docx
@@ -11,3 +11,8 @@ python-dotenv
 numpy
 scikit-learn 
 statsmodels
+uvicorn
+fastapi
+papermill
+nbformat
+nbconvert
