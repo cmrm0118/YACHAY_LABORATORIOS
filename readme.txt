@@ -23,14 +23,21 @@ Este microservicio permite ejecutar notebooks Jupyter (.ipynb) de manera control
 - git (opcional)
 
 ---
+### nota final
 
+en las carpetas runner y el archivo notebook runner se debe actualziar el nombre del entorno virtual donde se va a ejecutar los notebooks. Para el caso del ejemplo de creacion en entrono virtual se llama venv.
+en la carpeta donde se crea el entorno virtual se debe descargar este proyecto.
+los archivos integrados labs y orquestador labs quedan para manejo interno y no se ejecutan en el procesamiento del microservicio
 ## ⚙️ Instalación
 
 ### 1. Clona el repositorio (si aplica)
 
 
 ### 2. ACTIVA ENTORNO VIRTUAL
-
+2.1 crea entrono virtual 
+python -m venv venv
+source venv/bin/activate
+2.2 activa entorno virtual
 python -m venv venv
 venv\\Scripts\\activate
 
@@ -69,8 +76,5 @@ http://127.0.0.1:8000
   ]
 }
 
-### nota final
 
-en las carpetas runner y el archivo notebook runner se debe actualziar el nombre del entorno virtual donde se va a ejecutar los notebooks.
-los archivos integrados labs y orquestador labs quedan para manejo interno y no se ejecutan en el procesamiento del microservicio
 
