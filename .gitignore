@@ -1,0 +1,20 @@
+# Ignorar carpeta de salida de notebooks
+notebooks_etl/output/
+
+# Ignorar caché de Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Ignorar archivos temporales de Jupyter
+.ipynb_checkpoints/
+
+# Ignorar entornos virtuales (si usas venv)
+#venv/
+#.env/
+#*.env
+
+# Ignorar logs y archivos de pruebas
+*.log
+*.tmp
+*.bak
