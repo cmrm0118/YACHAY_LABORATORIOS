@@ -69,4 +69,8 @@ http://127.0.0.1:8000
   ]
 }
 
+### nota final
+
+en las carpetas runner y el archivo notebook runner se debe actualziar el nombre del entorno virtual donde se va a ejecutar los notebooks.
+los archivos integrados labs y orquestador labs quedan para manejo interno y no se ejecutan en el procesamiento del microservicio
 
