@@ -15,4 +15,4 @@ uvicorn
 fastapi
 papermill
 nbformat
-nbconvert
+nbconvert 
