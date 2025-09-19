@@ -45,10 +45,18 @@ venv\\Scripts\\activate
 pip install -r requirements.txt
 
 
-## EJECUCION DE Microservicio
+## El servidor minIO debe estar activo
+con los buckets: yachay-landing, yachay-bronze, yachay-golden
+y API en puerto 9000
+
+## La conexión a la base de datos PostgreSQL debe estar activa
+
+## Se debe crear la carpeta output dentro de la carpeta notebooks_etl
+
+## EJECUCIÓN DE Microservicio
 python -m uvicorn main:app --reload
 Esto levantará el servidor en:
-http://127.0.0.1:8000
+http://127.0.0.1:8000/docs
 
 ### CUERPO DEL JSON PARA EXTRACCION DE DATOS
 {
@@ -68,7 +76,7 @@ http://127.0.0.1:8000
   ]
 }
 
-## CUERPO DEL JSOPN PARA INTEGRACION A GOLDEN
+## CUERPO DEL JSON PARA INTEGRACION A GOLDEN
 {
   "notebooks": [
     "./notebooks_etl/Silver-golden/Silver-golden.ipynb",
