@@ -12,7 +12,9 @@ cffi==2.0.0
 charset-normalizer==3.4.3
 click==8.3.0
 colorama==0.4.6
+comm==0.2.3
 dateparser==1.2.2
+debugpy==1.8.17
 decorator==5.2.1
 defusedxml==0.7.1
 entrypoints==0.4
@@ -23,6 +25,7 @@ fastjsonschema==2.21.2
 h11==0.16.0
 idna==3.10
 import-ipynb==0.2
+ipykernel==6.30.1
 ipython==9.5.0
 ipython_pygments_lexers==1.1.1
 jedi==0.19.2
@@ -41,6 +44,7 @@ mistune==3.1.4
 nbclient==0.10.2
 nbconvert==7.16.6
 nbformat==5.10.4
+nest-asyncio==1.6.0
 numpy==2.3.3
 openpyxl==3.1.5
 packaging==25.0
@@ -51,6 +55,7 @@ parso==0.8.5
 patsy==1.0.1
 platformdirs==4.4.0
 prompt_toolkit==3.0.52
+psutil==7.1.0
 psycopg2-binary==2.9.10
 pure_eval==0.2.3
 pycparser==2.23
@@ -93,4 +98,3 @@ urllib3==2.5.0
 uvicorn==0.35.0
 wcwidth==0.2.13
 webencodings==0.5.1
-ipykernel==6.30.1
