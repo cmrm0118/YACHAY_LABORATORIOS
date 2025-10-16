@@ -1,5 +1,6 @@
 # Ignorar carpeta de salida de notebooks
 notebooks_etl/output/
+notebooks_etl_difuntos/output/
 
 # Ignorar caché de Python
 __pycache__/
