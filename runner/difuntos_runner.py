@@ -8,7 +8,7 @@ def ejecutar_difuntos(parameters: dict = {}):
     # Lista de notebooks de difuntos a ejecutar
     notebooks_difuntos = [
         "notebooks_etl_difuntos/Landing-Bronze/Landing-bronze-difuntos.ipynb",
-        # "notebooks_etl_difuntos/Bronze-Silver/Bronze-silver-difuntos.ipynb"  # Para fases futuras
+        "notebooks_etl_difuntos/Bronze-Silver/Bronze-silver-difuntos.ipynb"
     ]
 
     for input_path in notebooks_difuntos:
