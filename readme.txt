@@ -1,7 +1,8 @@
 readme_content = """
 # 🧠 Microservicio de Ejecución de Notebooks ETL
 
-Este microservicio permite ejecutar notebooks Jupyter (.ipynb) de manera controlada mediante una API REST desarrollada con FastAPI. Está diseñado para lanzar procesos ETL que residen en carpetas organizadas (como `Landing-Bronze`, `Bronze-Silver`) y requieren ejecución secuencial.
+Este microservicio permite ejecutar notebooks Jupyter (.ipynb) de manera controlada mediante una API REST desarrollada con FastAPI. 
+Está diseñado para lanzar procesos ETL que residen en carpetas organizadas (como `Landing-Bronze`, `Bronze-Silver`) y requieren ejecución secuencial.
 
 ---
 
@@ -49,6 +50,16 @@ pip install -r requirements.txt
 con los buckets: yachay-landing, yachay-bronze, yachay-golden
 y API en puerto 9000
 
+En yachay-landing cuando las fuentes de datos sean cargadas se debe tomar en cuenta las siguientes consideraciones:
+LABORATORIOS:
+El archivo a procesar debe estar en la ruta /Laboratorios/carpeta_laboratorio/nombre_archivo
+el nombre del archivo y su ruta deben ingresarse en los notebooks a ejecutar
+DEFUNCIONES:
+El archivo a procesar debe estar en la ruta /difuntos/nombre_archivo
+Como la estrucutura de los archivos es unica, el script lee todos los archivos dentro de la ruta a la vez
+
+
+
 ## La conexión a la base de datos PostgreSQL debe estar activa
 
 ## Se debe crear la carpeta output dentro de la carpeta notebooks_etl
@@ -68,11 +79,22 @@ http://127.0.0.1:8000/docs
     "./notebooks_etl/Landing-Bronze/Landing-bronze-laboratorio Monica Arcos.ipynb",
     "./notebooks_etl/Landing-Bronze/Landing-bronze-laboratorio San Pedro.ipynb",
 
+    "./notebooks_etl/Landing-Bronze/Landing-bronze-laboratorio HU Departamental.ipynb",
+    "./notebooks_etl/Landing-Bronze/Landing-bronze-laboratorio Patologos Asociados.ipynb",
+    "./notebooks_etl/Landing-Bronze/Landing-bronze-laboratorio UD Hemato Oncologos.ipynb",
+    "./notebooks_etl/Landing-Bronze/Landing-bronze-SYNLAB.ipynb.ipynb",
+    
     "./notebooks_etl/Bronze-Silver/Bronze-silver-Citopat.ipynb",
     "./notebooks_etl/Bronze-Silver/Bronze-silver-laboratorio FSanzon.ipynb",
     "./notebooks_etl/Bronze-Silver/Bronze-silver-laboratorio Jimenez.ipynb",
     "./notebooks_etl/Bronze-Silver/Bronze-silver-laboratorio Monica Arcos.ipynb",
-    "./notebooks_etl/Bronze-Silver/Bronze-silver-laboratorio San Pedro.ipynb"
+    "./notebooks_etl/Bronze-Silver/Bronze-silver-laboratorio San Pedro.ipynb",
+    
+    "./notebooks_etl/Bronze-Silver/Bronze-silver-laboratorio HU Departamental.ipynb",
+    "./notebooks_etl/Bronze-Silver/Bronze-silver-laboratorio Patologos Asociados.ipynb",
+    "./notebooks_etl/Bronze-Silver/Bronze-silver-laboratorio UD Hemato Oncologos.ipynb",
+    "./notebooks_etl/Bronze-Silver/Bronze-silver-SYNLAB.ipynb"
+
   ]
 }
 
@@ -84,5 +106,15 @@ http://127.0.0.1:8000/docs
   ]
 }
 
+## DIFUNTOS
+para ejecutar la extracción de datos del reporte de difuntos solo se da la orden desde la API y realizará un recorrido por los archivos dentro de la ruta del bucket
+ 
+## CUERPO DEL JSON PARA PROCESO DE LIMPIEZA
+{
+  "notebooks": [
+    "./notebooks_etl/Bronze-Silver/Bronze-silver-Unique.ipynb",
+    "./notebooks_etl/Bronze-Silver/Bronze-silver-Unique-difuntos.ipynb",
+  ]
+}
 
 
